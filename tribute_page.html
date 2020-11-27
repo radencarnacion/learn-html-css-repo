@@ -1,52 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    <style>
-      body {
-        background-color: gray;
-      }
-      #main {
-        background-color: lightblue;
-      }
-
-      #title {
-        background-color: cyan;
-      }
-
-      #img-caption {
-        font-size: 1.2em;
-      }
-
-      #title, #img-caption, #tribute-info {
-        text-align: center;
-        margin-top: 5px;
-      }
-      #image {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-        max-height: 100%;
-     }
-    </style>
-</style>
   <title>FCC - Responsive Web Design Project - Tribute Page</title>
+<style>
+  body {
+    background-color: white;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  ul li {
+    padding: 3px; /* increase readability with spacing between list items */
+  }
+
+  .box-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .pop-out-box {
+    /* define a pop-out text box */
+    display: block;
+    margin: auto;
+    padding: 0.5em;
+    max-width: 75%;
+    border: 1px solid black;
+    box-shadow: 0.25em 0.25em 0.25em gray;
+    text-align: left;
+    background-color: white;
+  }
+
+  #main {
+    /* define general container specifications */
+    background-color: #DFDFDF;
+    color: black;
+    border-radius: 2em;
+    margin: 1em;
+  }
+
+  #title, #img-caption, #trivia, #tribute-info, #quote, #external-link {
+    /* define general sub-container spec */
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 0.25em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
+
+  #title {
+    margin-top: 2em; /* override general spec to ensure whitespace at top */
+    text-align: center;
+  }
+
+  #img-div {
+    /* define whitespace insert */
+    background-color: white;
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 100%;
+    border-radius: 2em;
+  }
+
+  #image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 2em;
+  }
+
+  #img-caption {
+    text-align: center;
+  }
+
+  #tribute-info {
+    display: block;
+    margin: auto;
+    max-width: 75%
+
+  }
+
+  #external-link {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 4em; /* ensure whitespace at bottom due to compatibility issues with mobile browsers that have the address bar at the bottom of the screen (i.e. Firefox) */
+  }
+</style>
 </head>
 <body>
   <div id="main">
     <div id="title">
-      <h1>Name of Person For Tribute</h1>
+      <h1>Sir Christopher Frank Carandini Lee</h1>
     </div>
     <div id="img-div">
-      <img id="image" src="https://s3.amazonaws.com/freecodecamp/relaxing-cat.jpg" alt="Temporary Cat Photo">
+      <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Christopher_Lee_at_the_Berlin_International_Film_Festival_2013.jpg/800px-Christopher_Lee_at_the_Berlin_International_Film_Festival_2013.jpg" alt="Photo of Sir Christopher Lee at the Berlin Film Festival in February 2013">
       <div id="img-caption">
-        Caption
+        Sir Christopher Lee at the Berlin Film Festival in February 2013
       </div>
     </div>
-    <div id="tribute-info">
-      Tribute Information Text
+    <div id="trivia" class="pop-out-box">
+      <p class="box-header">Did you know?</p>
+      <p>Sir Christopher Lee has played 6 different roles with the title of "Count". The most famous ones are Count Dracula (<i>Dracula</i>) and Count Dooku (<i>Star Wars</i>).</p>
     </div>
-    <a id="tribute-link" href="" target="_blank">External Link About the Tribute Subject</a>
+    <div id="tribute-info">
+      <p class="box-header">Timeline</p>
+      <ul>
+        <li>1922 - Born in Belgravia, London</li>
+        <li>1926 - Moved to Swizterland with mother after parents' divorce</li>
+        <li>1928 - Played as Rupelstilktskin in Miss Fisher's Academy</li>
+        <li>1929 - Returned to London</li>
+        <li>1931 - Entered Summer Fields School, a prep school in Oxford</li>
+        <li>mid 1930's - Entered Wellington College</li>
+        <li>1939 - Dropped out of Wellington due to step-father's bankrupcy</li>
+        <li>1939 - Spent summer vacation in France, Worked for United States Lines, a mail company in London, and enrolled in military academy</li>
+        <li>1941 - Joined the Home Guard, then the Royal Air Force, eventually joining RAF Intelligence</li>
+        <li>1946 - Entered the entertainment industry by joining Two Cities Films</li>
+        <li>1947 - Debuted in <i>Corridor of Mirrors</i></li>
+        <li>1952 - Got his breakthrough by appearing in several movies by British National Studios</li>
+        <li>1958 - Played Count Dracula for the first time in <i>Dracula</i></li>
+        <li>1962 - Played Sherlock Holmes for the first time in <i>Sherlock Holmes and the Deadly Necklace</i></li>
+        <li>1971 - Played as Jekyll and Hide in <i>I, Monster</i></li>
+        <li>1973 - Played Dracula for the last time in <i>The Satanic Rites of Dracula</i>, Comte de Rochefort in <i>The Three Musketeers</i> and Lord Summerisle in <i>The Wicker Man</i></li>
+        <li>1974 - Played Francisco Scaramanga in <i>The Man With the Golden Gun</i>, a James Bond film</li>
+        <li>1977 - Moved to America</li>
+        <li>1991 - Played Sherlock Holmes for the last time in <i>Sherlock Holmes and the Leading Lady</i></li>
+        <li>2001 - Played Saruman for the first time in <i>The Lord of the Rings</i></li>
+        <li>2002 - Played Count Dooku in <i>Star Wars: Attack of the Clones</i></li>
+        <li>2005 - Played Dr. Wilbur Wonka in <i>Charlie and the Chocolate Factory</i></li>
+        <li>2009 - Knighted for his services to drama and charity</li>
+        <li>2011 - Played Saruman for the last time in <i>The Hobbit</i></li>
+        <li>2015 - Died in London at age 93</li>
+      </ul>
+    </div>
+    <div id="quote" class="pop-out-box">
+      <i><p>“Making films has never just been a job to me, it is my life. I have some interests outside of acting – I sing and I’ve written books, for instance – but acting is what keeps me going, it’s what I do, it gives life purpose.”</p>
+      <p>-- Sir Christopher Lee</p></i>
+    </div>
+    <div id="external-link">
+      If you would like to know more about this amazing actor, please visit <a id="tribute-link" href="https://en.wikipedia.org/wiki/Christopher_Lee" target="_blank">Sir Christopher Lee's Wikipedia page.</a>
+    </div>
   </div>
 </body>
 </html>
