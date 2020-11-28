@@ -1,57 +1,81 @@
-<!DOCTYPE html>
 <html>
  <head>
  <title>FCC - Responsive Web Design Project - Survey Form</title>
  <style type="text/css">
- body {
-  background-image: url(https://radencarnacion.github.io/learn-html-css-repo/pexels-fox-3829227.jpg);
-  font-family: Arial, sans-serif;
- }
 
- label {
-  margin-left: 0.25em;
- }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
- input {
-  margin: 0.5em 1em 1em 0.25em;
-  padding: 0.25em;
- }
+  body {
+   background-color: white;
+   font-family: Arial, sans-serif;
+  }
+
+  input[type=text], input[type=email], input[type=number] {
+   width: 100%;
+  }
 
   #main {
-  background-color: lightblue;
-  border-radius: 5px;
-  opacity: 9;
- }
-</style>
+   background-color: cyan;
+   border-radius: 5px;
+  }
+
+  .survey-input {
+   max-width: 100%;
+   padding: 0.5em;
+  } /* double-check */
+
+  #survey-form {
+   padding: 1em 0.25em 1em 0.25em;
+  }
+
+  input {
+   max-width: 100%;
+   margin-bottom: 0.5em;
+  }
+ </style>    
  </head>
- <body class="basic">
+ <body>
    <div id="title">
      <h1>Survey Form</h1>
      <p id="description"><i>Online Game Purchasing Habits</i></p>
    </div>
    <div id="main">
      <form id="survey-form">
-      <label id="name-label" for="name">Name</label><br>
-      <input id="name" type="text" name="name" placeholder="ex. John Smith or 田中太郎"><br>
-      <label id="email-label" for="email">Email</label><br>
-      <input id="email" type="email" name="email"  placeholder="email@domain.com"><br>
-      <label id="number-label" for="numOfSteamGames">Number of Games Owned on Steam</label>
-      <input id="numOfSteamGames" type="number" name="numOfSteamGames" min="0" max="10000" placeholder="This field can accept a value from 0 to 10000"><br>
-      <label id="dropdown-label" for="dropdown">How many games have you bought from Steam in the last 12 months? (not including games received for free)</label><br>
+      <div class="survey-input">
+       <label id="name-label" for="name">Name</label><br>
+       <input id="name" type="text" name="name" placeholder="ex. John Smith or 田中太郎">
+      </div>
+      <div class="survey-input">
+       <label id="email-label" for="email">Email</label><br>
+       <input id="email" type="email" name="email"  placeholder="email@domain.com">
+      </div>
+      <div class="survey-input">
+       <label id="number-label" for="numOfSteamGames">How many games do you have in your Steam library?</label><br>
+       <input id="numOfSteamGames" type="number" name="numOfSteamGames" min="0" max="10000" placeholder="This field can accept a value from 0 to 10000">
+      </div>
+      <div class="survey-input">
+       <label id="dropdown-label" for="dropdown">How many games have you bought from Steam in the last 12 months? (not including games received for free)</label><br>
       <select id="dropdown" name="dropdown" size="0">
         <option value="0">None</option>
         <option value="1-to-2">1 to 2</option>
         <option value="3-to-5">3 to 5</option>
         <option value="6-to-9">6 to 9</option>
         <option value="10-or-more">10 or more</option>
-      </select><br>
-       <label id="radio-label" for="preferredTimeOfPurchase">When do you usually buy games on Steam?</label>
+      </select>
+      </div>
+      <div class="survey-input">
+       <label id="radio-label" for="preferredTimeOfPurchase">When do you usually buy games on Steam?</label><br>
        <input id="release-date" type="radio" name="preferredTimeOfPurchase" value="release-date">
        <label id="release-date-label" for="release-date">On a game's release date</label><br>
        <input id="early-access" type="radio" name="preferredTimeOfPurchase" value="early-access">
-       <label id="early-access-label" for="early-access">During a game's Early Access period</input>
+       <label id="early-access-label" for="early-access">During a game's Early Access period</label><br>
        <input id="steam-sale" type="radio" name="preferredTimeOfPurchase" value="steam-sale">
-       <label id="steam-sale-label" for="steam-sale">When it's part of a Steam sale
+       <label id="steam-sale-label" for="steam-sale">When it's part of a Steam sale</label>
+      </div>
 
      </form>
 
