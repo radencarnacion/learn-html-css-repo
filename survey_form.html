@@ -3,40 +3,40 @@
  <title>FCC - Responsive Web Design Project - Survey Form</title>
  <style type="text/css">
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
 
-  body {
-   background-color: white;
-   font-family: Arial, sans-serif;
-  }
+ body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+ }
 
-  input[type=text], input[type=email], input[type=number] {
-   width: 100%;
-  }
+ input[type=text], input[type=email], input[type=number] {
+  width: 100%;
+ }
 
-  #main {
-   background-color: cyan;
-   border-radius: 5px;
-  }
+ #main {
+  background-color: cyan;
+  border-radius: 5px;
+ }
 
-  .survey-input {
-   max-width: 100%;
-   padding: 0.5em;
-  } /* double-check */
+ .survey-input {
+  max-width: 100%;
+  padding: 0.5em;
+ } /* double-check */
 
-  #survey-form {
-   padding: 1em 0.25em 1em 0.25em;
-  }
+ #survey-form {
+  padding: 1em 0.25em 1em 0.25em;
+ }
 
-  input {
-   max-width: 100%;
-   margin-bottom: 0.5em;
-  }
- </style>    
+ input {
+  max-width: 100%;
+  margin-bottom: 0.5em;
+ }
+</style>    
  </head>
  <body>
    <div id="title">
@@ -76,7 +76,11 @@
        <input id="steam-sale" type="radio" name="preferredTimeOfPurchase" value="steam-sale">
        <label id="steam-sale-label" for="steam-sale">When it's part of a Steam sale</label>
       </div>
-
+      <div class="survey-input">
+       <label id="checkall-label" for="checkall">What genre of games do you usually buy? (Check all that apply)</label><br>
+       <input id="RPG" type="checkbox" name="genreOfGames" value="RPG">
+       <label id="RPG-label" for="RPG">RPG</label><br>
+      </div>
      </form>
 
    </div>
