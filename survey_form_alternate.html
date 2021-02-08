@@ -1,0 +1,72 @@
+<!doctype html>
+<head>
+  <title>FCC: Responsive Web Design Project - Survey Form</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+  </style>
+</head>
+
+<body>
+  <div id="title"><h1>PC Gaming Hardware Brand Popularity</h1></div>
+  <div id="description">This is a survery of the relative popularity of PC Gaming Hardware Brands</div>
+
+  <!-- Survey Form -->
+  <div id="survey-form-container">
+    <form id="survey-form">
+      <div class="name">
+        <label id="name-label" class="text-label" for="pName">Name:</label><br>
+        <input type="text" id="pName" name="pName" required placeholder="Survey Participant's Name">
+      </div>
+      <div class="email">
+        <label id="email-label" class="text-label" for="pMail">Email:</label><br>
+        <input type="email" id="pMail" name="pMail" required placeholder="Survey Participant's Email Address">
+      </div>
+      <div class="number">
+        <label id="number-label" class="text-label" for="pAge">Age: <em>(8-120, Optional)</em></label><br>
+        <input type="number" id="pAge" name="pAge" min="8" max="120" placeholder="Survey Participant's Age">
+      </div>
+      <div class="dropdown">
+        <label class="text-label" for="genre">Preferred Genre of Gaming:</label><br>
+          <select id="genre">
+            <option value="Action">Action</option>
+            <option value="FPS">First-person Shooter (FPS)</option>
+            <option value="Platformer">Platformer</option>
+            <option value="RTS">Real-time Strategy (RTS)</option>
+            <option value="Rogue-like">Rogue-like</option>
+            <option value="RPG">Role-playing Game (RPG)</option>
+            <option value="Simulation">Simulation</option>
+            <option value="Others">Others</option>
+          </select>
+      </div>
+      <div class="radio-group">
+        <fieldset><legend>Preferred CPU Brand</legend>
+          <input type="radio" id="CPU" name="CPU" value="AMD">
+          <label class="text-label" for="CPU">AMD</label><br>
+          <input type="radio" id="CPU" name="CPU" value="Intel">
+          <label class="text-label" for="CPU">Intel</label>
+        </fieldset>
+      </div>
+      <div class="checkbox-group">
+        <fieldset><legend>Brands of Graphics Cards Owned</legend>
+          <input type="checkbox" id="GPU" name="GPU" value="AMD">
+          <label class="text-label" for="GPU">AMD</label><br>
+          <input type="checkbox" id="GPU" name="GPU" value="Nvidia">
+          <label class="text-label" for="GPU">Nvidia</label>
+        </fieldset>
+      </div>
+      <div class="inputbox">
+        <label class="text-label" for="reasons">What are your reasons when buying one brand over another?</label><br>
+        <textarea name="reasons" cols="50" rows="5" placeholder="Enter reasons when buying"></textarea>
+      </div>
+      <div class="submit-button">
+        <input type="submit" id="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
