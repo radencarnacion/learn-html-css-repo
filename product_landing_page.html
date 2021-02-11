@@ -8,6 +8,7 @@
       height: auto;
       padding: 0;
       margin: 0;
+      top: 0;
       box-sizing: border-box;
     }
 
@@ -15,32 +16,26 @@
       text: black;
       background-color: dodgerblue;
       position: sticky;
-      top: 0;
-      border-bottom: 1px solid black;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
     }
 
     .nav-bar {
       text: black;
       background-color: gray;
-      display: flex;
+      display: inline-flex;
       flex-direction: row;
     }
 
-    .footer-container {
-      text: black;
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    }
   </style>
 </head>
 <body>
   <div id="header" class="header-container">
     <div class="logo">
-      <img id="header-img" href="https://via.placeholder.com/150.png" alt="Logo">
+      <img id="header-img" src="https://via.placeholder.com/150.png" alt="Logo">
     </div>
+
     <div id="nav-bar" class="nav-bar">
       <div class="nav-link">
         <a href="#nav1">NAV 1</a>
